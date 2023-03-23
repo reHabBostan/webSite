@@ -1,5 +1,4 @@
-import { Image } from "./image";
-import React from "react";
+import { Image } from './Image';
 
 export const Gallery = (props) => {
   return (
@@ -7,27 +6,17 @@ export const Gallery = (props) => {
       <div className="container">
         <div className="section-title">
           <h2>Gallery</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leonec.</p>
         </div>
         <div className="row">
           <div className="portfolio-items">
             {props.data
               ? props.data.map((d, i) => (
-                  <div
-                    key={`${d.title}-${i}`}
-                    className="col-sm-6 col-md-4 col-lg-4"
-                  >
-                    <Image
-                      title={d.title}
-                      largeImage={d.largeImage}
-                      smallImage={d.smallImage}
-                    />
+                  <div key={`${d.title}-${i}`} className="col-sm-6 col-md-4 col-lg-4">
+                    <Image title={d.title} largeImage={d.largeImage} smallImage={d.smallImage} />
                   </div>
                 ))
-              : "Loading..."}
+              : 'Loading...'}
           </div>
         </div>
       </div>
